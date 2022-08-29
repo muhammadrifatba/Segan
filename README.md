@@ -1,0 +1,2 @@
+# Segan
+Dosage Scheduler App
