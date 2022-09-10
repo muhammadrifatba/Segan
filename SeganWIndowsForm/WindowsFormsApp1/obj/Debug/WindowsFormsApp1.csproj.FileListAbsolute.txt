@@ -1,0 +1,13 @@
+D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.login.resources
