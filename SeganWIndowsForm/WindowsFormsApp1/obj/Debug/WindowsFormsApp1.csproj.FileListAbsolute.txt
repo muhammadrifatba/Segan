@@ -11,3 +11,7 @@ D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsF
 D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\bin\Debug\Bunifu_UI_v1.5.3.dll
 D:\KULIAH\Semester 5\Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.login.resources
+E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
