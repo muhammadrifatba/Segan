@@ -34,3 +34,5 @@ D:\KULIAH\Semester 5\Junpro\Segan2\SeganWIndowsForm\WindowsFormsApp1\bin\Debug\G
 D:\KULIAH\Semester 5\Junpro\Segan2\SeganWIndowsForm\WindowsFormsApp1\bin\Debug\Hourglass.dll
 D:\KULIAH\Semester 5\Junpro\Segan2\SeganWIndowsForm\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
 D:\KULIAH\Semester 5\Junpro\Segan2\SeganWIndowsForm\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
+D:\KULIAH\Semester 5\Junpro\Segan2\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.InputObat.resources
+D:\KULIAH\Semester 5\Junpro\Segan2\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Home.resources
