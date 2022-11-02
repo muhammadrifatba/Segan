@@ -11,33 +11,14 @@ using System.Globalization;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class Sched : Form
     {
         int month, year;
-        public Form1()
+        public Sched()
         {
             InitializeComponent();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            displaDays();
-        }
+        
         private void displaDays()
         {
             DateTime now = DateTime.Now;
@@ -45,18 +26,18 @@ namespace WindowsFormsApp1
             year = now.Year;
 
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-            labelMonthYear.Text = monthname+ " " +year;
-            DateTime startofthemonth = new DateTime(year , month, 1);
-            int days = DateTime.DaysInMonth(year  , month);
+            labelMonthYear.Text = monthname + " " + year;
+            DateTime startofthemonth = new DateTime(year, month, 1);
+            int days = DateTime.DaysInMonth(year, month);
             int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d"));
-            
+
             for (int i = 1; i < dayoftheweek; i++)
             {
                 UserControlBlank ucblank = new UserControlBlank();
                 daycontainer.Controls.Add(ucblank);
-            } 
+            }
 
-            for(int i = 1; i <= days; i++)
+            for (int i = 1; i <= days; i++)
             {
                 UserControlDays ucdays = new UserControlDays();
                 ucdays.days(i);
@@ -66,7 +47,18 @@ namespace WindowsFormsApp1
 
         }
 
-        private void Previousbutton_Click(object sender, EventArgs e)
+
+        private void daycontainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Sched_Load(object sender, EventArgs e)
+        {
+            displaDays();
+        }
+
+        private void Previousbutton_Click_1(object sender, EventArgs e)
         {
             //clear container
             daycontainer.Controls.Clear();
@@ -94,11 +86,10 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void NextButton_Click(object sender, EventArgs e)
-
-        { 
+        private void NextButton_Click_1(object sender, EventArgs e)
+        {
             //clear container
-            daycontainer.Controls.Clear(); 
+            daycontainer.Controls.Clear();
             //increment month
             month++;
 
@@ -121,7 +112,8 @@ namespace WindowsFormsApp1
                 ucdays.days(i);
                 daycontainer.Controls.Add(ucdays);
             }
-
         }
-    }
-}
+
+        
+      }
+   }

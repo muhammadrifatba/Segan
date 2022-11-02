@@ -117,18 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuGradientPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVChTjcNBCkBAAIXhd3cHcAAHcIDZ2bCzkKTUJEoT
-        NVYc4XcE76tPRZhwqmxmnKq6BafqPuJUGFecapcdp4btwKmYEk6d94VT75P5n/kAQhhS5Lut6MoAAAAA
-        SUVORK5CYII=
-</value>
-  </data>
   <metadata name="pictureBox1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABLAAAAJ2CAYAAABPQHtcAAAABGdBTUEAALGPC/xhBQAA5etJREFUeF7s
@@ -1114,6 +1106,14 @@
         yM5KK0IIIYQQQgghhJAUAAEPgh6EWgh9TPATC/y3nipa9NCqd7H6S/VB9QV1o4oACisfvq9+pH6ioooL
         qwAisEKwhVbF/1PRtrhcXaT+Uf21Ok/F7CoEVagM+6aQzQRxeEy4ZVhFCCGEkMPgmGP+H6cVS4DPj2tc
         AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuGradientPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABRSURBVChTjcNBCkBAAIXhd3cHcAAHcIDZ2bCzkKTUJEoT
+        NVYc4XcE76tPRZhwqmxmnKq6BafqPuJUGFecapcdp4btwKmYEk6d94VT75P5n/kAQhhS5Lut6MoAAAAA
+        SUVORK5CYII=
 </value>
   </data>
 </root>
