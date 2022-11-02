@@ -64,6 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActiveDrug.cs" />
+    <Compile Include="AddJadwalObat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddJadwalObat.Designer.cs">
+      <DependentUpon>AddJadwalObat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Calendar.cs" />
     <Compile Include="Drugs.cs" />
     <Compile Include="Home.cs">
@@ -123,6 +129,9 @@
     <Compile Include="UserControlDays.Designer.cs">
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddJadwalObat.resx">
+      <DependentUpon>AddJadwalObat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

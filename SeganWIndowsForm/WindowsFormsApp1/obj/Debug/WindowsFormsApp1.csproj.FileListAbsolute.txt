@@ -39,3 +39,4 @@ D:\KULIAH\Semester 5\Junpro\Segan2\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\W
 D:\KULIAH\Semester 5\Junpro\Segan2\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 D:\KULIAH\Semester 5\Junpro\Segan2\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sched.resources
 D:\KULIAH\Semester 5\Junpro\Segan2\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\KULIAH\Semester 5\Junpro\Segan2\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AddJadwalObat.resources

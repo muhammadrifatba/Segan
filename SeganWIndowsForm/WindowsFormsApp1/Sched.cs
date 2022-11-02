@@ -62,6 +62,13 @@ namespace WindowsFormsApp1
         {
             //clear container
             daycontainer.Controls.Clear();
+            if (month == 1)
+            {
+                month = 13;
+                year--;
+
+            }
+            
             //increment month
             month--;
 
@@ -91,10 +98,17 @@ namespace WindowsFormsApp1
             //clear container
             daycontainer.Controls.Clear();
             //increment month
-            month++;
 
+            if (month == 12)
+            {
+                month = 0;
+                year++;
+               
+            }
+            month++;
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             labelMonthYear.Text = monthname + " " + year;
+
 
             DateTime startofthemonth = new DateTime(year, month, 1);
             int days = DateTime.DaysInMonth(year, month);
