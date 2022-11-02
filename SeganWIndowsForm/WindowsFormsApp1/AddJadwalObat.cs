@@ -21,5 +21,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

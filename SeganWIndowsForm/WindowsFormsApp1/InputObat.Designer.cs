@@ -47,10 +47,6 @@ namespace WindowsFormsApp1
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
             this.SignUpbutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -70,7 +66,7 @@ namespace WindowsFormsApp1
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(-1, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1330, 60);
             this.panel2.TabIndex = 13;
@@ -94,7 +90,7 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.InputPBtoSched);
             this.panel1.Controls.Add(this.InputPBtoHome);
             this.panel1.Location = new System.Drawing.Point(-1, 53);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(90, 673);
             this.panel1.TabIndex = 12;
@@ -103,7 +99,7 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(18, 258);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 50);
             this.pictureBox5.TabIndex = 4;
@@ -113,7 +109,7 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(18, 600);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.TabIndex = 3;
@@ -124,7 +120,7 @@ namespace WindowsFormsApp1
             // 
             this.InputPBtoSched.Image = ((System.Drawing.Image)(resources.GetObject("InputPBtoSched.Image")));
             this.InputPBtoSched.Location = new System.Drawing.Point(18, 168);
-            this.InputPBtoSched.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.InputPBtoSched.Margin = new System.Windows.Forms.Padding(2);
             this.InputPBtoSched.Name = "InputPBtoSched";
             this.InputPBtoSched.Size = new System.Drawing.Size(50, 50);
             this.InputPBtoSched.TabIndex = 1;
@@ -135,7 +131,7 @@ namespace WindowsFormsApp1
             // 
             this.InputPBtoHome.Image = ((System.Drawing.Image)(resources.GetObject("InputPBtoHome.Image")));
             this.InputPBtoHome.Location = new System.Drawing.Point(18, 74);
-            this.InputPBtoHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.InputPBtoHome.Margin = new System.Windows.Forms.Padding(2);
             this.InputPBtoHome.Name = "InputPBtoHome";
             this.InputPBtoHome.Size = new System.Drawing.Size(50, 50);
             this.InputPBtoHome.TabIndex = 0;
@@ -146,7 +142,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.textBox1.Location = new System.Drawing.Point(329, 105);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(242, 32);
             this.textBox1.TabIndex = 14;
@@ -155,7 +151,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.textBox2.Location = new System.Drawing.Point(329, 160);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(242, 32);
             this.textBox2.TabIndex = 15;
@@ -164,7 +160,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.textBox3.Location = new System.Drawing.Point(329, 219);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(242, 32);
             this.textBox3.TabIndex = 16;
@@ -217,50 +213,10 @@ namespace WindowsFormsApp1
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.textBox4.Location = new System.Drawing.Point(883, 105);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(242, 32);
             this.textBox4.TabIndex = 23;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(883, 167);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(242, 26);
-            this.dateTimePicker1.TabIndex = 24;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label4.Location = new System.Drawing.Point(710, 165);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(175, 24);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Tgl Mulai Konsumsi";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePicker2.Location = new System.Drawing.Point(883, 225);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(242, 26);
-            this.dateTimePicker2.TabIndex = 26;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label6.Location = new System.Drawing.Point(710, 227);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(173, 24);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Tgl Akhir Konsumsi";
             // 
             // SignUpbutton
             // 
@@ -270,7 +226,7 @@ namespace WindowsFormsApp1
             this.SignUpbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.SignUpbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SignUpbutton.Location = new System.Drawing.Point(716, 294);
-            this.SignUpbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SignUpbutton.Margin = new System.Windows.Forms.Padding(2);
             this.SignUpbutton.Name = "SignUpbutton";
             this.SignUpbutton.Size = new System.Drawing.Size(125, 28);
             this.SignUpbutton.TabIndex = 28;
@@ -285,7 +241,7 @@ namespace WindowsFormsApp1
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(881, 294);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 28);
             this.button1.TabIndex = 29;
@@ -300,7 +256,7 @@ namespace WindowsFormsApp1
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(558, 294);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 28);
             this.button2.TabIndex = 30;
@@ -315,7 +271,7 @@ namespace WindowsFormsApp1
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Location = new System.Drawing.Point(392, 294);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(125, 28);
             this.button3.TabIndex = 31;
@@ -343,7 +299,7 @@ namespace WindowsFormsApp1
             this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(176, 342);
-            this.bunifuCustomDataGrid1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuCustomDataGrid1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.bunifuCustomDataGrid1.RowHeadersWidth = 51;
@@ -361,10 +317,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.SignUpbutton);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -406,10 +358,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button SignUpbutton;
         private System.Windows.Forms.Button button1;
