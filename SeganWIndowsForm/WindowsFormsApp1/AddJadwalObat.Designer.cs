@@ -31,6 +31,8 @@ namespace WindowsFormsApp1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddJadwalObat));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbInterval = new System.Windows.Forms.TextBox();
             this.submitDrugAct = new System.Windows.Forms.Button();
             this.deleteDrugAct = new System.Windows.Forms.Button();
             this.updateDrugAct = new System.Windows.Forms.Button();
@@ -42,8 +44,7 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.tbDosis = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbInterval = new System.Windows.Forms.TextBox();
+            this.cbObat = new System.Windows.Forms.ComboBox();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@ namespace WindowsFormsApp1
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.cbObat);
             this.bunifuGradientPanel1.Controls.Add(this.label5);
             this.bunifuGradientPanel1.Controls.Add(this.tbInterval);
             this.bunifuGradientPanel1.Controls.Add(this.submitDrugAct);
@@ -73,6 +75,26 @@ namespace WindowsFormsApp1
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(506, 616);
             this.bunifuGradientPanel1.TabIndex = 99999;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(73, 339);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 17);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Interval";
+            // 
+            // tbInterval
+            // 
+            this.tbInterval.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbInterval.Location = new System.Drawing.Point(76, 359);
+            this.tbInterval.Name = "tbInterval";
+            this.tbInterval.Size = new System.Drawing.Size(342, 29);
+            this.tbInterval.TabIndex = 20;
             // 
             // submitDrugAct
             // 
@@ -98,6 +120,7 @@ namespace WindowsFormsApp1
             this.deleteDrugAct.TabIndex = 18;
             this.deleteDrugAct.Text = "Delete";
             this.deleteDrugAct.UseVisualStyleBackColor = false;
+            this.deleteDrugAct.Click += new System.EventHandler(this.deleteDrugAct_Click);
             // 
             // updateDrugAct
             // 
@@ -110,6 +133,7 @@ namespace WindowsFormsApp1
             this.updateDrugAct.TabIndex = 17;
             this.updateDrugAct.Text = "Update";
             this.updateDrugAct.UseVisualStyleBackColor = false;
+            this.updateDrugAct.Click += new System.EventHandler(this.updateDrugAct_Click);
             // 
             // ObatDropdown
             // 
@@ -199,25 +223,13 @@ namespace WindowsFormsApp1
             this.tbName.Size = new System.Drawing.Size(342, 29);
             this.tbName.TabIndex = 9;
             // 
-            // label5
+            // cbObat
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(73, 339);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 17);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Interval";
-            // 
-            // tbInterval
-            // 
-            this.tbInterval.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbInterval.Location = new System.Drawing.Point(76, 359);
-            this.tbInterval.Name = "tbInterval";
-            this.tbInterval.Size = new System.Drawing.Size(342, 29);
-            this.tbInterval.TabIndex = 20;
+            this.cbObat.FormattingEnabled = true;
+            this.cbObat.Location = new System.Drawing.Point(76, 431);
+            this.cbObat.Name = "cbObat";
+            this.cbObat.Size = new System.Drawing.Size(342, 21);
+            this.cbObat.TabIndex = 22;
             // 
             // AddJadwalObat
             // 
@@ -249,5 +261,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button deleteDrugAct;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbInterval;
+        private System.Windows.Forms.ComboBox cbObat;
     }
 }

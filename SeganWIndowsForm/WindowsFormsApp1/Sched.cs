@@ -14,9 +14,10 @@ namespace WindowsFormsApp1
     public partial class Sched : Form
     {
         int month, year;
-        public Sched()
+        public Sched(string userId, string username, string role)
         {
             InitializeComponent();
+            MessageBox.Show(userId);
         }
         
         private void displaDays()
