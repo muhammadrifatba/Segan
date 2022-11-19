@@ -55,9 +55,9 @@ namespace WindowsFormsApp1
                 string desc = tbDescObat.Text;
                 string gambar = tbImgObat.Text;
 
-                if(nama == "")
+                if(nama == "" || type == "" || desc == "" || gambar == "")
                 {
-                    MessageBox.Show("Obat kosong Kosong");
+                    MessageBox.Show("Silahkan isi semua data");
                     return;
                 }
 

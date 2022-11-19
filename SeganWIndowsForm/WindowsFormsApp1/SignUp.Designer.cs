@@ -39,8 +39,8 @@ namespace WindowsFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.SignUpPasswordlabel = new System.Windows.Forms.Label();
             this.SignUpUserLabel = new System.Windows.Forms.Label();
-            this.SignUpPasstB1 = new System.Windows.Forms.TextBox();
-            this.UserSignUptB1 = new System.Windows.Forms.TextBox();
+            this.tbPass = new System.Windows.Forms.TextBox();
+            this.tbUsername = new System.Windows.Forms.TextBox();
             this.bunifuGradientPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(-3, 0);
-            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(820, 520);
@@ -73,10 +73,10 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.SignUpPasswordlabel);
             this.panel1.Controls.Add(this.SignUpUserLabel);
-            this.panel1.Controls.Add(this.SignUpPasstB1);
-            this.panel1.Controls.Add(this.UserSignUptB1);
+            this.panel1.Controls.Add(this.tbPass);
+            this.panel1.Controls.Add(this.tbUsername);
             this.panel1.Location = new System.Drawing.Point(262, 56);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 396);
             this.panel1.TabIndex = 0;
@@ -88,7 +88,7 @@ namespace WindowsFormsApp1
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(86, 84);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(126, 104);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,12 +103,13 @@ namespace WindowsFormsApp1
             this.SignUpbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.SignUpbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SignUpbutton.Location = new System.Drawing.Point(77, 341);
-            this.SignUpbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SignUpbutton.Margin = new System.Windows.Forms.Padding(2);
             this.SignUpbutton.Name = "SignUpbutton";
             this.SignUpbutton.Size = new System.Drawing.Size(125, 28);
             this.SignUpbutton.TabIndex = 8;
             this.SignUpbutton.Text = "Sign Up";
             this.SignUpbutton.UseVisualStyleBackColor = false;
+            this.SignUpbutton.Click += new System.EventHandler(this.SignUpbutton_Click);
             // 
             // label5
             // 
@@ -164,27 +165,27 @@ namespace WindowsFormsApp1
             this.SignUpUserLabel.TabIndex = 2;
             this.SignUpUserLabel.Text = "Username";
             // 
-            // SignUpPasstB1
+            // tbPass
             // 
-            this.SignUpPasstB1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.SignUpPasstB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.SignUpPasstB1.Location = new System.Drawing.Point(44, 291);
-            this.SignUpPasstB1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.SignUpPasstB1.MinimumSize = new System.Drawing.Size(203, 35);
-            this.SignUpPasstB1.Name = "SignUpPasstB1";
-            this.SignUpPasstB1.Size = new System.Drawing.Size(203, 35);
-            this.SignUpPasstB1.TabIndex = 1;
+            this.tbPass.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tbPass.Location = new System.Drawing.Point(44, 291);
+            this.tbPass.Margin = new System.Windows.Forms.Padding(2);
+            this.tbPass.MinimumSize = new System.Drawing.Size(203, 35);
+            this.tbPass.Name = "tbPass";
+            this.tbPass.Size = new System.Drawing.Size(203, 26);
+            this.tbPass.TabIndex = 1;
             // 
-            // UserSignUptB1
+            // tbUsername
             // 
-            this.UserSignUptB1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.UserSignUptB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.UserSignUptB1.Location = new System.Drawing.Point(44, 240);
-            this.UserSignUptB1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.UserSignUptB1.MinimumSize = new System.Drawing.Size(203, 35);
-            this.UserSignUptB1.Name = "UserSignUptB1";
-            this.UserSignUptB1.Size = new System.Drawing.Size(203, 35);
-            this.UserSignUptB1.TabIndex = 0;
+            this.tbUsername.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tbUsername.Location = new System.Drawing.Point(44, 240);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.tbUsername.MinimumSize = new System.Drawing.Size(203, 35);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.Size = new System.Drawing.Size(203, 26);
+            this.tbUsername.TabIndex = 0;
             // 
             // SignUp
             // 
@@ -192,7 +193,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 515);
             this.Controls.Add(this.bunifuGradientPanel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SignUp";
             this.Text = "Login";
             this.bunifuGradientPanel2.ResumeLayout(false);
@@ -207,8 +208,8 @@ namespace WindowsFormsApp1
 
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox SignUpPasstB1;
-        private System.Windows.Forms.TextBox UserSignUptB1;
+        private System.Windows.Forms.TextBox tbPass;
+        private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Label SignUpPasswordlabel;
         private System.Windows.Forms.Label SignUpUserLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
