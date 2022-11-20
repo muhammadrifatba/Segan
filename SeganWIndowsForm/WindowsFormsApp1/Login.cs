@@ -62,11 +62,14 @@ namespace WindowsFormsApp1
                     MessageBox.Show("SignUp Berhasil");
                     this.Hide();
                     Sched sched = new Sched(dtUser.Rows[0].ItemArray[0].ToString(), dtUser.Rows[0].ItemArray[1].ToString(), dtUser.Rows[0].ItemArray[2].ToString());
+                    con.Close();
                     sched.ShowDialog();
                 }
-
-                MessageBox.Show("Invalid Username or Password! Login again!");
-                con.Close();
+                else
+                {
+                    MessageBox.Show("Invalid Username or Password! Login again!");
+                    con.Close();
+                }
 
             }
             catch (Exception err)

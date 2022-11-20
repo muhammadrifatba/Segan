@@ -21,12 +21,17 @@ namespace WindowsFormsApp1
         private DataTable dtObat;
         DataTable activeForm;
 
-        public AddJadwalObat(string useri_id)
+        private string userId_var, username_var;
+
+        public AddJadwalObat(string userId, string username)
         {
             InitializeComponent();
             dbConnection dbConnect = new dbConnection();
             (con, cmd) = dbConnect.InitializeConnection();
+            userId_var = userId;
+            username_var = username;
             obatSeeding();
+
         }
 
         private void obatSeeding()
@@ -70,7 +75,7 @@ namespace WindowsFormsApp1
                 con.Open();
                 cmd.Connection = con;
                 cmd.CommandText = string.Format(
-                    "INSERT INTO actv_obat (actv_name, actv_obat_id, obat_dosage, obat_interval, consume_date, actv_user_id) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}');", nama, obat, dosis, interval, tanggal);
+                    "INSERT INTO actv_obat (actv_name, actv_obat_id, obat_dosage, obat_interval, consume_date, actv_user_id) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}');", nama, obat, dosis, interval, tanggal, userId_var);
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Berhasil Input Aktivitas Obat");
@@ -112,17 +117,12 @@ namespace WindowsFormsApp1
 
         private void deleteDrugAct_Click(object sender, EventArgs e)
         {
-            string nama = tbName.Text;
-            string obat = ObatDropdown.Text;
-            string dosis = tbDosis.Text;
-            string interval = tbInterval.Text;
-            string tanggal = tbTanggal.Text;
             try
             {
                 con.Open();
                 cmd.Connection = con;
                 cmd.CommandText = string.Format(
-                     "DELETE FROM actv_obat WHERE actv_id = '{0}'", nama);
+                     "DELETE FROM actv_obat WHERE actv_id = '{0}'", userId_var);
 
                 cmd.ExecuteNonQuery();
 

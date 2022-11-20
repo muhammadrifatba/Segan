@@ -160,7 +160,7 @@ namespace WindowsFormsApp1
                     con.Open();
                     cmd.Connection = con;
                     cmd.CommandText = string.Format(
-                         "DELETE FROM obat WHERE obat_id = '{0}'", dgRow.Cells["obat_id"].Value.ToString());// WHERE act_user_id = '{0}'", user);
+                         "DELETE FROM obat WHERE obat_id = '{0}'", dgRow.Cells["obat_id"].Value.ToString());
 
                     cmd.ExecuteNonQuery();
 

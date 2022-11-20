@@ -8,16 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using System.Runtime.CompilerServices;
 
 namespace WindowsFormsApp1
 {
     public partial class Sched : Form
     {
         int month, year;
+        private string userId_var, username_var;
+        private int role_var;
+        
         public Sched(string userId, string username, string role)
         {
             InitializeComponent();
-            MessageBox.Show(userId);
+            UserSchedLabel.Text = username;
+            userId_var = username;
+            username_var = username;
         }
         
         private void displaDays()
