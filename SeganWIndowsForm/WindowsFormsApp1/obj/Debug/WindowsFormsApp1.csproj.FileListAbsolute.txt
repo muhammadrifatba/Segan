@@ -133,13 +133,11 @@ E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\bin\Debug\System.Threading.Chann
 E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
 E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
 E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AddJadwalObat.resources
-E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
 E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Home.resources
 E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.InputObat.resources
 E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
 E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Sched.resources
-E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Schedule.resources
 E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.SignUp.resources
 E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControlBlank.resources
 E:\[0] Junpro\SeganWIndowsForm\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserControlDays.resources

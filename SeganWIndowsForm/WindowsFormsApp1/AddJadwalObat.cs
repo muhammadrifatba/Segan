@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using Npgsql;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp1
-
-    // TODO : Know Who is The Current USER
 {
     public partial class AddJadwalObat : Form
     {
@@ -19,19 +19,37 @@ namespace WindowsFormsApp1
         NpgsqlCommand cmd;
         private NpgsqlDataReader dr;
         private DataTable dtObat;
-        DataTable activeForm;
 
-        private string userId_var, username_var;
+        private string userId_var;
+        private string actv_id;
 
-        public AddJadwalObat(string userId, string username)
+        public AddJadwalObat(string userId)
         {
             InitializeComponent();
             dbConnection dbConnect = new dbConnection();
             (con, cmd) = dbConnect.InitializeConnection();
             userId_var = userId;
-            username_var = username;
+            obatSeeding();
+        }
+
+        public AddJadwalObat(string obat,string dosis,string interval,string tanggal, string nama, string actvId)
+        {
+            InitializeComponent();
+            dbConnection dbConnect = new dbConnection();
+            (con, cmd) = dbConnect.InitializeConnection();
+            actv_id = actvId;
             obatSeeding();
 
+            MessageBox.Show(tanggal);
+
+            tbName.Text = nama;
+            cbObat.Text = obat;
+            tbDosis.Text = dosis;
+            tbInterval.Text = interval;
+            tbTanggal.Text = tanggal;
+            
+
+            con.Close();
         }
 
         private void obatSeeding()
@@ -48,6 +66,9 @@ namespace WindowsFormsApp1
 
             dtObat.Load(dr);
 
+            cbObat.DisplayMember = "Text";
+            cbObat.ValueMember = "Value";
+
             for (int i =0; i < dtObat.Rows.Count; i++)
             {
                 string obat_id = dtObat.Rows[i].ItemArray[0].ToString();
@@ -60,7 +81,7 @@ namespace WindowsFormsApp1
         private void submitDrugAct_Click(object sender, EventArgs e)
         {
             string nama = tbName.Text;
-            string obat = ObatDropdown.Text;
+            string obat = cbObat.Text;
             string dosis = tbDosis.Text;
             string interval = tbInterval.Text;
             string tanggal = tbTanggal.Text;
@@ -71,15 +92,16 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Silahkan isi semua data");
                     return;
                 }
-
-                con.Open();
+                
                 cmd.Connection = con;
                 cmd.CommandText = string.Format(
                     "INSERT INTO actv_obat (actv_name, actv_obat_id, obat_dosage, obat_interval, consume_date, actv_user_id) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}');", nama, obat, dosis, interval, tanggal, userId_var);
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Berhasil Input Aktivitas Obat");
+
                 con.Close();
+                this.Hide();
             }
             catch (Exception err)
             {
@@ -90,7 +112,7 @@ namespace WindowsFormsApp1
         private void updateDrugAct_Click(object sender, EventArgs e)
         {
             string nama = tbName.Text;
-            string obat = ObatDropdown.Text;
+            string obat = cbObat.Text;
             string dosis = tbDosis.Text;
             string interval = tbInterval.Text;
             string tanggal = tbTanggal.Text;
@@ -101,7 +123,7 @@ namespace WindowsFormsApp1
                 cmd.Connection = con;
                 cmd.CommandText = string.Format(
                      "UPDATE actv_obat SET actv_name = '{0}', actv_obat_id = '{1}', obat_dosage = '{2}', obat_interval = '{3}', consume_date = '{4}' WHERE actv_id = '{5}'",
-                     nama, obat, dosis, interval, tanggal);
+                     nama, obat, dosis, interval, tanggal, actv_id);
 
                 cmd.ExecuteNonQuery();
 
@@ -115,6 +137,16 @@ namespace WindowsFormsApp1
 
         }
 
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AddJadwalObat_Load(object sender, EventArgs e)
+        {
+            tbTanggal.Text = Sched.static_year + "/" +  Sched.static_month + "/" +  UserControlDays.static_day ;
+        }
+
         private void deleteDrugAct_Click(object sender, EventArgs e)
         {
             try
@@ -122,7 +154,7 @@ namespace WindowsFormsApp1
                 con.Open();
                 cmd.Connection = con;
                 cmd.CommandText = string.Format(
-                     "DELETE FROM actv_obat WHERE actv_id = '{0}'", userId_var);
+                     "DELETE FROM actv_obat WHERE actv_id = '{0}'", actv_id);
 
                 cmd.ExecuteNonQuery();
 

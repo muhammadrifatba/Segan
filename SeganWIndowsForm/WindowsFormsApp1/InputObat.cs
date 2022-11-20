@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
 using Npgsql;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WindowsFormsApp1
 {
@@ -18,25 +20,31 @@ namespace WindowsFormsApp1
         DataGridViewRow dgRow;
         NpgsqlDataReader dr;
         DataTable dt;
+        public string userId_var, username_var, role_var;
+        
 
-        public InputObat()
+
+        public InputObat(string userId, string username, string role)
         {
             InitializeComponent();
             dbConnection dbConnect = new dbConnection();
             (con, cmd) = dbConnect.InitializeConnection();
+            userId_var = userId;
+            username_var = username;
+            role_var = role;
         }
 
         private void InputPBtoHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Home hom = new Home();
+            Home hom = new Home(userId_var, username_var, role_var);
             hom.Show();
         }
 
         private void InputPBtoSched_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Schedule sche = new Schedule();
+            Sched sche = new Sched(userId_var, username_var, role_var);
             sche.Show();
         }
 
@@ -120,7 +128,7 @@ namespace WindowsFormsApp1
                 cmd.Connection = con;
                 cmd.CommandText = string.Format(
                      "UPDATE obat SET obat_nama = '{0}', obat_type = '{1}', obat_desc = '{2}' WHERE obat_id = '{3}'",
-                     tbNamaObat.Text, tbTipeObat.Text, tbDescObat.Text, dgRow.Cells["obat_id"].Value.ToString());// WHERE act_user_id = '{0}'", user);
+                     tbNamaObat.Text, tbTipeObat.Text, tbDescObat.Text, dgRow.Cells["obat_id"].Value.ToString());
 
                 cmd.ExecuteNonQuery();
 

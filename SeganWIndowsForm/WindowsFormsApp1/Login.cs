@@ -59,11 +59,12 @@ namespace WindowsFormsApp1
                 {
                     DataTable dtUser = new DataTable();
                     dtUser.Load(dr);
-                    MessageBox.Show("SignUp Berhasil");
                     this.Hide();
-                    Sched sched = new Sched(dtUser.Rows[0].ItemArray[0].ToString(), dtUser.Rows[0].ItemArray[1].ToString(), dtUser.Rows[0].ItemArray[2].ToString());
+                    //Sched sched = new Sched(dtUser.Rows[0].ItemArray[0].ToString(), dtUser.Rows[0].ItemArray[1].ToString(), dtUser.Rows[0].ItemArray[2].ToString());
+                    Home home = new Home(dtUser.Rows[0].ItemArray[0].ToString(), dtUser.Rows[0].ItemArray[1].ToString(), dtUser.Rows[0].ItemArray[2].ToString());
+
                     con.Close();
-                    sched.ShowDialog();
+                    home.ShowDialog();
                 }
                 else
                 {

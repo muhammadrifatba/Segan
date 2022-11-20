@@ -12,20 +12,30 @@ using System.Runtime.CompilerServices;
 
 namespace WindowsFormsApp1
 {
+    //TODO:
+    //1. Upcoming
+    //2. Auto Refres
+
     public partial class Sched : Form
     {
         int month, year;
-        private string userId_var, username_var;
-        private int role_var;
+        string userId_var, username_var, role_var;
         
+        public static int static_month, static_year;
         public Sched(string userId, string username, string role)
         {
             InitializeComponent();
             UserSchedLabel.Text = username;
-            userId_var = username;
+            userId_var = userId;
             username_var = username;
+            role_var = role;
+
+            if (role_var == "2")
+            {
+                drugpbsched.Hide();
+            }
         }
-        
+
         private void displaDays()
         {
             DateTime now = DateTime.Now;
@@ -38,6 +48,9 @@ namespace WindowsFormsApp1
             int days = DateTime.DaysInMonth(year, month);
             int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d"));
 
+            static_month = month;
+            static_year = year;
+
             for (int i = 1; i < dayoftheweek; i++)
             {
                 UserControlBlank ucblank = new UserControlBlank();
@@ -46,12 +59,19 @@ namespace WindowsFormsApp1
 
             for (int i = 1; i <= days; i++)
             {
-                UserControlDays ucdays = new UserControlDays();
+                UserControlDays ucdays = new UserControlDays(userId_var, i);
                 ucdays.days(i);
                 daycontainer.Controls.Add(ucdays);
             }
 
 
+        }
+
+        private void drugpbsched_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InputObat inputdrag = new InputObat(userId_var, username_var, role_var);
+            inputdrag.Show();
         }
 
 
@@ -79,6 +99,9 @@ namespace WindowsFormsApp1
             //increment month
             month--;
 
+            static_month = month;
+            static_year = year;
+
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             labelMonthYear.Text = monthname + " " + year;
 
@@ -94,11 +117,13 @@ namespace WindowsFormsApp1
 
             for (int i = 1; i <= days; i++)
             {
-                UserControlDays ucdays = new UserControlDays();
+                UserControlDays ucdays = new UserControlDays(userId_var, i);
                 ucdays.days(i);
                 daycontainer.Controls.Add(ucdays);
             }
         }
+
+        
 
         private void NextButton_Click_1(object sender, EventArgs e)
         {
@@ -113,6 +138,9 @@ namespace WindowsFormsApp1
                
             }
             month++;
+
+            static_month = month;
+            static_year = year;
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             labelMonthYear.Text = monthname + " " + year;
 
@@ -129,7 +157,7 @@ namespace WindowsFormsApp1
 
             for (int i = 1; i <= days; i++)
             {
-                UserControlDays ucdays = new UserControlDays();
+                UserControlDays ucdays = new UserControlDays(userId_var, i);
                 ucdays.days(i);
                 daycontainer.Controls.Add(ucdays);
             }

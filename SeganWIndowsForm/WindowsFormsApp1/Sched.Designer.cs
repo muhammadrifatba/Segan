@@ -45,29 +45,29 @@ namespace WindowsFormsApp1
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.userCards = new Bunifu.Framework.UI.BunifuCards();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.UserSchedLabel = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.drugpbsched = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.userCards.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drugpbsched)).BeginInit();
             this.SuspendLayout();
             // 
             // NextButton
@@ -210,9 +210,9 @@ namespace WindowsFormsApp1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(104)))), ((int)(((byte)(159)))));
+            this.panel1.Controls.Add(this.drugpbsched);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-3, 79);
             this.panel1.Name = "panel1";
@@ -237,15 +237,6 @@ namespace WindowsFormsApp1
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(14, 251);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -269,6 +260,17 @@ namespace WindowsFormsApp1
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(225, 347);
             this.panel3.TabIndex = 37;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(19, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Date";
             // 
             // panel4
             // 
@@ -329,17 +331,6 @@ namespace WindowsFormsApp1
             this.label1.TabIndex = 2;
             this.label1.Text = "Upcoming";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(19, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Date";
-            // 
             // userCards
             // 
             this.userCards.BackColor = System.Drawing.Color.White;
@@ -357,6 +348,16 @@ namespace WindowsFormsApp1
             this.userCards.Size = new System.Drawing.Size(225, 86);
             this.userCards.TabIndex = 38;
             // 
+            // UserSchedLabel
+            // 
+            this.UserSchedLabel.AutoSize = true;
+            this.UserSchedLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserSchedLabel.Location = new System.Drawing.Point(72, 27);
+            this.UserSchedLabel.Name = "UserSchedLabel";
+            this.UserSchedLabel.Size = new System.Drawing.Size(43, 21);
+            this.UserSchedLabel.TabIndex = 41;
+            this.UserSchedLabel.Text = "User";
+            // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
@@ -369,15 +370,16 @@ namespace WindowsFormsApp1
             this.pictureBox6.TabIndex = 39;
             this.pictureBox6.TabStop = false;
             // 
-            // UserSchedLabel
+            // drugpbsched
             // 
-            this.UserSchedLabel.AutoSize = true;
-            this.UserSchedLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserSchedLabel.Location = new System.Drawing.Point(72, 27);
-            this.UserSchedLabel.Name = "UserSchedLabel";
-            this.UserSchedLabel.Size = new System.Drawing.Size(43, 21);
-            this.UserSchedLabel.TabIndex = 41;
-            this.UserSchedLabel.Text = "User";
+            this.drugpbsched.Image = ((System.Drawing.Image)(resources.GetObject("drugpbsched.Image")));
+            this.drugpbsched.Location = new System.Drawing.Point(14, 249);
+            this.drugpbsched.Margin = new System.Windows.Forms.Padding(2);
+            this.drugpbsched.Name = "drugpbsched";
+            this.drugpbsched.Size = new System.Drawing.Size(50, 50);
+            this.drugpbsched.TabIndex = 13;
+            this.drugpbsched.TabStop = false;
+            this.drugpbsched.Click += new System.EventHandler(this.drugpbsched_Click);
             // 
             // Sched
             // 
@@ -405,7 +407,6 @@ namespace WindowsFormsApp1
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -413,6 +414,7 @@ namespace WindowsFormsApp1
             this.userCards.ResumeLayout(false);
             this.userCards.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drugpbsched)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,7 +437,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
@@ -448,5 +449,6 @@ namespace WindowsFormsApp1
         private Bunifu.Framework.UI.BunifuCards userCards;
         private System.Windows.Forms.Label UserSchedLabel;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox drugpbsched;
     }
 }
