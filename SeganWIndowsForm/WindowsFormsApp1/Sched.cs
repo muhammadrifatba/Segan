@@ -9,15 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Runtime.CompilerServices;
+using Npgsql;
+
 
 namespace WindowsFormsApp1
 {
     //TODO:
     //1. Upcoming
-    //2. Auto Refres
+    //2. Auto refesh
 
     public partial class Sched : Form
     {
+        NpgsqlConnection con;
+        NpgsqlCommand cmd;
+        DataGridViewRow dgRow;
+        NpgsqlDataReader dr;
+        DataTable dt;
         int month, year;
         string userId_var, username_var, role_var;
         
@@ -25,6 +32,8 @@ namespace WindowsFormsApp1
         public Sched(string userId, string username, string role)
         {
             InitializeComponent();
+            dbConnection dbConnect = new dbConnection();
+            (con, cmd) = dbConnect.InitializeConnection();
             UserSchedLabel.Text = username;
             userId_var = userId;
             username_var = username;
@@ -33,6 +42,40 @@ namespace WindowsFormsApp1
             if (role_var == "2")
             {
                 drugpbsched.Hide();
+            }
+
+            upcoming();
+        }
+
+        private void upcoming()
+        {
+            try
+            {
+                con.Open();
+                cmd.Connection = con;
+                cmd.CommandText = string.Format("SELECT consume_date, actv_obat_id FROM actv_obat WHERE actv_user_id = '{0}' AND consume_date = '{1}'", userId_var, DateTime.Now.ToString("yyyy/MM/dd"));
+
+                dt = new DataTable();
+                dr = cmd.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    dt.Load(dr);
+
+                    lblTanggal.Text = dt.Rows[0].ItemArray[0].ToString();
+                    lblActv.Text = dt.Rows[0].ItemArray[1].ToString();
+                }
+                else
+                {
+                    lblTanggal.Text = "";
+                    lblActv.Text = "No medication schedule";
+                }
+
+                con.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error: " + err.Message, "FAIL Search!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -74,6 +117,12 @@ namespace WindowsFormsApp1
             inputdrag.Show();
         }
 
+        private void pbHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home home = new Home(userId_var, username_var, role_var);
+            home.Show();
+        }
 
         private void daycontainer_Paint(object sender, PaintEventArgs e)
         {

@@ -15,7 +15,6 @@ namespace WindowsFormsApp1
     {
         NpgsqlConnection con;
         NpgsqlCommand cmd;
-        DataGridViewRow dgRow;
         NpgsqlDataReader dr;
         DataTable dt;
         public string userId_var, username_var, role_var;
@@ -33,7 +32,11 @@ namespace WindowsFormsApp1
                 drugpbhome.Hide();
             }
             
+            lblUsername.Text = username_var;
+            lblWelcome.Text = "Welcome " + username_var;
+
             dataFill();
+            upcoming();
         }
 
 
@@ -48,6 +51,38 @@ namespace WindowsFormsApp1
             this.Hide();
             Sched sched = new Sched(userId_var, username_var, role_var);
             sched.Show();
+        }
+
+        private void upcoming()
+        {
+            try
+            {
+                con.Open();
+                cmd.Connection = con;
+                cmd.CommandText = string.Format("SELECT consume_date, actv_obat_id FROM actv_obat WHERE actv_user_id = '{0}' AND consume_date = '{1}'", userId_var, DateTime.Now.ToString("yyyy/MM/dd"));
+
+                dt = new DataTable();
+                dr = cmd.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    dt.Load(dr);
+
+                    lblTanggal.Text = dt.Rows[0].ItemArray[0].ToString();
+                    lblActv.Text = dt.Rows[0].ItemArray[1].ToString();
+                }
+                else
+                {
+                    lblTanggal.Text = "";
+                    lblActv.Text = "No medication schedule";
+                }
+
+                con.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error: " + err.Message, "FAIL Search!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void dataFill()

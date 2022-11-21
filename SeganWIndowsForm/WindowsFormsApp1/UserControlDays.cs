@@ -72,6 +72,5 @@ namespace WindowsFormsApp1
             }
             con.Close();
         }
-
     }
 }

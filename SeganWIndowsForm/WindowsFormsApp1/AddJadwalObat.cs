@@ -40,15 +40,12 @@ namespace WindowsFormsApp1
             actv_id = actvId;
             obatSeeding();
 
-            MessageBox.Show(tanggal);
-
             tbName.Text = nama;
             cbObat.Text = obat;
             tbDosis.Text = dosis;
             tbInterval.Text = interval;
             tbTanggal.Text = tanggal;
             
-
             con.Close();
         }
 
