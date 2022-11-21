@@ -51,19 +51,26 @@ namespace WindowsFormsApp1
                 con.Open();
                 cmd.Connection = con;
                 cmd.CommandText = string.Format(
-                    "SELECT * FROM users WHERE name = '{0}' AND password = '{1}';", username, password);
-                NpgsqlDataReader data = cmd.ExecuteReader();
+                    "SELECT id, name, role FROM users WHERE name = '{0}' AND password = '{1}';", username, password);
+                NpgsqlDataReader dr = cmd.ExecuteReader();
                 
-                if (data.HasRows)
-                {
-                    MessageBox.Show("SignUp Berhasil");
-                    this.Hide();
-                    Sched sched = new Sched();
-                    sched.ShowDialog();
-                }
 
-                MessageBox.Show("Invalid Username or Password! Login again!");
-                con.Close();
+                if (dr.HasRows)
+                {
+                    DataTable dtUser = new DataTable();
+                    dtUser.Load(dr);
+                    this.Hide();
+                    //Sched sched = new Sched(dtUser.Rows[0].ItemArray[0].ToString(), dtUser.Rows[0].ItemArray[1].ToString(), dtUser.Rows[0].ItemArray[2].ToString());
+                    Home home = new Home(dtUser.Rows[0].ItemArray[0].ToString(), dtUser.Rows[0].ItemArray[1].ToString(), dtUser.Rows[0].ItemArray[2].ToString());
+
+                    con.Close();
+                    home.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username or Password! Login again!");
+                    con.Close();
+                }
 
             }
             catch (Exception err)

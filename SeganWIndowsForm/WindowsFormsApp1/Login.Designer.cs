@@ -139,6 +139,7 @@ namespace WindowsFormsApp1
             this.Loginbutton.Text = "Login";
             this.Loginbutton.UseVisualStyleBackColor = false;
             this.Loginbutton.Click += new System.EventHandler(this.Loginbutton_Click);
+            this.Loginbutton.Enter += new System.EventHandler(this.Loginbutton_Click);
             // 
             // label5
             // 
@@ -204,6 +205,7 @@ namespace WindowsFormsApp1
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(203, 26);
             this.tbPass.TabIndex = 1;
+            this.tbPass.UseSystemPasswordChar = true;
             // 
             // tbUsername
             // 

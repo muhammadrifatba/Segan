@@ -37,9 +37,9 @@ namespace WindowsFormsApp1
             this.labelday.AutoSize = true;
             this.labelday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelday.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelday.Location = new System.Drawing.Point(12, 12);
+            this.labelday.Location = new System.Drawing.Point(17, 17);
             this.labelday.Name = "labelday";
-            this.labelday.Size = new System.Drawing.Size(22, 16);
+            this.labelday.Size = new System.Drawing.Size(21, 16);
             this.labelday.TabIndex = 0;
             this.labelday.Text = "00";
             // 
@@ -49,9 +49,11 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.labelday);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UserControlDays";
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.Size = new System.Drawing.Size(125, 80);
-            this.Load += new System.EventHandler(this.UserControlDays_Load);
+            this.Click += new System.EventHandler(this.UserControlDays_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
